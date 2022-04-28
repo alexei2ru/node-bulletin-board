@@ -26,7 +26,8 @@
                   }
                 } 
               },
-              "path": "/bulletin-board"
+              "path": "/bulletin-board",
+              "pathType": "prefix"
             }
           ]
         }
