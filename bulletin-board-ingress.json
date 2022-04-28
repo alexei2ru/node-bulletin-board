@@ -11,6 +11,7 @@
         "port": {
           "number": 8080
         }
+      }
     },
     "rules": [
       {
@@ -23,9 +24,7 @@
                   "port": {
                     "number": 8080
                   }
-                }
-                
-                
+                } 
               },
               "path": "/bulletin-board"
             }
