@@ -6,8 +6,10 @@
   },
   "spec": {
     "backend": {
-      "serviceName": "bulletin-board-service",
-      "servicePort": 8080
+      "service": {
+        "name": "bulletin-board-service",
+        "port": {
+          "number": 8080
     },
     "rules": [
       {
@@ -15,8 +17,14 @@
           "paths": [
             {
               "backend": {
-                "serviceName": "bulletin-board-service",
-                "servicePort": 8080
+                "service": {
+                  "name": "bulletin-board-service",
+                  "port": {
+                    "number": 8080
+                  }
+                }
+                
+                
               },
               "path": "/bulletin-board"
             }
