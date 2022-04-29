@@ -54,5 +54,5 @@ if [ $status_code == 404 ]; then
  echo "Creating ingress"
  curl --fail -H 'Content-Type: application/yaml' -sSk -H "Authorization: Bearer $KUBE_TOKEN" \
     "https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_PORT_443_TCP_PORT/apis/networking.k8s.io/v1/namespaces/$NAMESPACE/ingresses" \
-    -X POST --data-binary @bulletin-board-ingress.jaml
+    -X POST --data-binary @bulletin-board-ingress.yaml
 fi
