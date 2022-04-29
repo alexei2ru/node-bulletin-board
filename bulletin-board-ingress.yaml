@@ -2,14 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bulletin-board-ingress
+  namespace: gocd
 spec:
+  ingressClassName: nginx
   rules:
-  - http:
+  - host: bulletin-board.test
+    http:
       paths:
       - backend:
           service:
             name: bulletin-board-service
             port:
               number: 8080
-        path: "/bulletin-board"
+        path: /bulletin-board
         pathType: Prefix
